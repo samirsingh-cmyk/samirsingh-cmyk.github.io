@@ -1,0 +1,237 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* home Section */
+.home-section {
+    background-image: url('images/ghost_concept_art_3.webp'); /* Replace with a relevant hero image */
+    background-size: cover;
+    background-attachment: fixed; /* Parallax effect */
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+
+/* Overlay for better text visibility */
+.home-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    z-index: 1;
+}
+
+.home-section-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Typewriter Text Styling */
+#typewriter {
+    font-size: 1.5rem;
+    color: #00ffbf; /* Highlight color */
+    font-weight: 300;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #00ffbf;
+    animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
+}
+
+/* New Animation for Blinking Cursor */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Blinking Cursor (added as a class) */
+.blink-cursor {
+    border-color: transparent !important;
+}
+
+/* Hover Effect for Name */
+.hover-effect:hover {
+    color: #00ffbf; /* Highlight on hover */
+    transform: scale(1.1); /* Slight zoom */
+    transition: all 0.3s ease;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar-nav .nav-link {
+    color: #bbb !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff !important;
+}
+
+/* Profile Picture Styling */
+.profile-pic {
+    width: 200px;
+    height: 250px;
+    object-fit: cover; /* Ensures the image scales without distortion */
+    margin: 0 auto;
+    padding-top: 5px;
+    padding-bottom: 0px;
+}
+
+/* About Section Styling */
+.about-section {
+    position: relative;
+    padding: 60px 0;
+    color: #dddddd; /* Keep text color unaffected */
+    z-index: 1; /* Ensure content is above the background */
+}
+
+.about-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/wow-background.avif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(0.25); /* Adjust brightness as needed */
+    z-index: -1; /* Position behind the content */
+    opacity: 1; /* Optional: adjust transparency if needed */
+}
+
+.about-section h2,
+.about-section p,
+.about-section h3 {
+    color: #dddddd;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+.skills-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Custom Progress Bar Colors */
+.unity-bar {
+    background-color: #00cad1 !important; /* Custom color for Unity */
+}
+
+.csharp-bar {
+    background-color: #ff5733 !important; /* Custom color for C# */
+}
+
+.pixelart-bar {
+    background-color: #ffd700 !important; /* Custom color for Pixel Art */
+}
+
+
+/* Fun Fact Flip Card Styling */
+.fun-fact {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 250px;
+    height: 150px;
+    text-align: center;
+    background-color: #254d77;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.5s;
+    perspective: 1000px;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    padding: 20px;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-back {
+    transform: rotateY(0deg);
+}
+
+/* Contact Section Styling */
+.contact-section {
+    position: relative;
+    padding: 60px 0;
+    color: #dddddd; /* Keep text color unaffected */
+    min-height: 100vh; /* Ensure the section covers the entire height of the viewport */
+    z-index: 1; /* Ensure content is above the background */
+}
+
+.contact-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/wow-background.avif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Optional: keep or remove based on mobile compatibility */
+    z-index: -1; /* Position behind the content */
+}
+
+.contact-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black semi-transparent overlay */
+    z-index: -1; /* Ensure overlay stays behind the content */
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
