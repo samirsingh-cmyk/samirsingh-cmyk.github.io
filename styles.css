@@ -8,9 +8,9 @@ body, html {
 
 /* home Section */
 .home-section {
-    background-image: url('images/ghost_concept_art_3.webp'); /* Replace with a relevant hero image */
+    background-image: url('images/ghost_concept_art_3.webp');
     background-size: cover;
-    background-attachment: fixed; /* Parallax effect */
+    background-attachment: fixed; 
     background-position: center;
     height: 100vh;
     display: flex;
@@ -28,7 +28,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
@@ -48,7 +48,7 @@ body, html {
     animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
 }
 
-/* New Animation for Blinking Cursor */
+/* Animation for Blinking Cursor */
 @keyframes blink {
     50% {
         border-color: transparent;
@@ -87,7 +87,7 @@ body, html {
 .profile-pic {
     width: 200px;
     height: 250px;
-    object-fit: cover; /* Ensures the image scales without distortion */
+    object-fit: cover; 
     margin: 0 auto;
     padding-top: 5px;
     padding-bottom: 0px;
@@ -97,8 +97,8 @@ body, html {
 .about-section {
     position: relative;
     padding: 60px 0;
-    color: #dddddd; /* Keep text color unaffected */
-    z-index: 1; /* Ensure content is above the background */
+    color: #dddddd;
+    z-index: 1; 
 }
 
 .about-section::before {
@@ -112,9 +112,9 @@ body, html {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    filter: brightness(0.25); /* Adjust brightness as needed */
-    z-index: -1; /* Position behind the content */
-    opacity: 1; /* Optional: adjust transparency if needed */
+    filter: brightness(0.25);
+    z-index: -1;
+    opacity: 1; 
 }
 
 .about-section h2,
@@ -196,13 +196,32 @@ body, html {
     transform: rotateY(0deg);
 }
 
+/* Projects section */
+.projects-section {
+    padding: 60px 0;
+    background-color: #121212;
+    color: #dddddd;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #dddddd;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 /* Contact Section Styling */
 .contact-section {
     position: relative;
     padding: 60px 0;
-    color: #dddddd; /* Keep text color unaffected */
-    min-height: 100vh; /* Ensure the section covers the entire height of the viewport */
-    z-index: 1; /* Ensure content is above the background */
+    color: #dddddd;
+    min-height: 100vh;
+    z-index: 1; 
 }
 
 .contact-section::before {
@@ -215,8 +234,8 @@ body, html {
     background-image: url('images/wow-background.avif');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Optional: keep or remove based on mobile compatibility */
-    z-index: -1; /* Position behind the content */
+    background-attachment: fixed; 
+    z-index: -1; 
 }
 
 .contact-section::after {
@@ -226,8 +245,8 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Black semi-transparent overlay */
-    z-index: -1; /* Ensure overlay stays behind the content */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1; 
 }
 
 .section-title {
@@ -235,3 +254,62 @@ body, html {
     color: #ffffff;
     margin-bottom: 30px;
 }
+
+.telkom-masters-section {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+
+.telkom-masters-section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/VS-masters/Telkom-VS-Gaming-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(0.1);
+    z-index: -1;
+    opacity: 1; 
+}
+
+.telkom-masters-section h2 {
+    color: #fff;
+}
+
+.lan-image {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.lan-image img {
+    flex: 1 1 30%;
+    max-width: 30%;
+    height: 300px;
+    object-fit: cover;
+    border: #ffffff solid 2px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.lan-image img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .lan-image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
